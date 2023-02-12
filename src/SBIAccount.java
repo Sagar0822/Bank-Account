@@ -57,15 +57,15 @@ public class SBIAccount implements BankInterface {
         this.rateOfInterest = rateOfInterest;
     }
 
-    @Override
-    public int getbalance() {
-        return this.balance;
-    }
+    //@Override
+    //public int getbalance() {
+        //return this.balance;
+    //}
 
     @Override
     public String depositMoney(int amount) {
         this.balance +=amount;
-        return "Successfully added" + balance;
+        return "Successfully added " + amount;
     }
 
     @Override
@@ -75,7 +75,7 @@ public class SBIAccount implements BankInterface {
                 return "Insufficient balance";
             else{
                 this.balance -= amount;
-                return "Successfully widhdrow";
+                return "Successfully widhdrow " + amount + '\n'+ "Your new Balance is " + balance;
             }
         }
         else{
