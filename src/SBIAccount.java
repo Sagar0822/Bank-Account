@@ -67,7 +67,6 @@ public class SBIAccount implements BankInterface {
         this.balance +=amount;
         return "Successfully added " + amount;
     }
-
     @Override
     public String widhdraw(int amount , String enteredPassword) {
         if(enteredPassword.equals(this.password)){
@@ -82,7 +81,6 @@ public class SBIAccount implements BankInterface {
             return "Password incorrect";
         }
     }
-
     @Override
     public double calculateInterest(int time) {
         return (balance*rateOfInterest*time)/100;
